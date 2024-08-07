@@ -1,0 +1,16 @@
+<div>
+    <h1>Bienvenido {{ user.name }}</h1>
+
+    {{#if isAdmin}} {{!-- IF(isAdmin)... --}}
+        {{#each users}} {{!-- ITERADOR --}}
+            <div>
+                <p>{{ this.name }} - {{ this.email }}</p>
+                <hr>
+            </div>
+        {{/each}} {{!-- CIERRE DEL ITERADOR --}}
+    {{else}} {{!-- ELSE... --}}
+        <h2>NO TIENES PERMISO PARA VER LOS USUARIOS</h2>
+    {{/if}} {{!-- CIERRE DEL IF --}}
+</div>
+
+<script src="../static/assets/js/users.js"></script> {{!-- EN VEZ DE PUBLIC ES STATIC --}}

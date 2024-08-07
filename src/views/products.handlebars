@@ -1,0 +1,13 @@
+<div>
+    <h1>Bienvenido {{ user.name }}</h1>
+
+    {{#if isProducts}}
+        <h2>NO HAY PRODUCTOS CARGADOS</h2>
+    {{/if}}
+
+    {{#each products}}
+        <p>{{ this.name }} - ${{ this.price }}</p>
+    {{/each}}
+</div>
+
+<script src="../static/assets/js/products.js"></script>
